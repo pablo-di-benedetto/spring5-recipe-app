@@ -1,7 +1,8 @@
-package guru.springframework.spring5recipeapp.domain;
+package guru.springframework.domain;
 
 import javax.persistence.*;
 
+@Entity
 public class Notes {
 
     @Id
