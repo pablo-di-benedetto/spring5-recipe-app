@@ -55,7 +55,7 @@ public class RecipeServiceImplTest {
     }
 
     @Test
-    public void getRecipeCoomandByIdTest() throws Exception {
+    public void getRecipeCommandByIdTest() throws Exception {
         Recipe recipe = new Recipe();
         recipe.setId(1L);
         Optional<Recipe> recipeOptional = Optional.of(recipe);
@@ -78,10 +78,10 @@ public class RecipeServiceImplTest {
     public void getRecipesTest() throws Exception {
 
         Recipe recipe = new Recipe();
-        HashSet receipesData = new HashSet();
-        receipesData.add(recipe);
+        HashSet recipeData = new HashSet();
+        recipeData.add(recipe);
 
-        when(recipeRepository.findAll()).thenReturn(receipesData);
+        when(recipeRepository.findAll()).thenReturn(recipeData);
 
         Set<Recipe> recipes = recipeService.getRecipes();
 
